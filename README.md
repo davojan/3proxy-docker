@@ -23,8 +23,8 @@ Minimalistic Alpine-based 3proxy image
 mkdir /etc/3proxy
 touch /etc/3proxy/passwd
 
-docker run --name 3proxy \
-  -p 1080:1080 -p 3128:3128 \
+docker run -d --name 3proxy \
+  -p 1080:1080 -p 1080:1080/udp -p 3128:3128 \
   -v /etc/3proxy/passwd:/etc/3proxy/passwd \
   davojan/3proxy
 ```

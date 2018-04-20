@@ -13,6 +13,6 @@ RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositorie
 ADD 3proxy.cfg /etc/3proxy/3proxy.cfg
 ADD entrypoint.sh /
 
-EXPOSE 1080 3128
+EXPOSE 1080 1080/udp 3128
 
 ENTRYPOINT [ "/entrypoint.sh" ]
